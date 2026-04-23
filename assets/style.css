@@ -1,0 +1,180 @@
+/* ============================================================
+   StockDash IN — Dark Financial Theme
+   Inspired by Bloomberg Terminal and TradingView dark mode
+   ============================================================ */
+
+/* Base */
+body {
+    background-color: #0d1117 !important;
+    color: #c9d1d9 !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #30363d; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #484f58; }
+
+/* ── Navbar ──────────────────────────────────────────────── */
+.navbar { border-bottom: 1px solid #21262d !important; }
+.nav-link { color: #8b949e !important; transition: color 0.15s; }
+.nav-link:hover { color: #c9d1d9 !important; }
+.nav-link.active { color: #4fc3f7 !important; border-bottom: 2px solid #4fc3f7; }
+
+/* ── Cards ───────────────────────────────────────────────── */
+.card { background-color: #161b22 !important; border-color: #21262d !important; }
+.card-header { border-bottom-color: #21262d !important; }
+
+/* Index cards */
+.index-card-name {
+    font-size: 11px;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+}
+.index-card-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #c9d1d9;
+    margin-bottom: 2px;
+    font-family: 'Courier New', monospace;
+}
+
+/* ── Price colors ────────────────────────────────────────── */
+.price-up   { color: #00ff88 !important; font-weight: 600; }
+.price-down { color: #ff4444 !important; font-weight: 600; }
+.price-flat { color: #c9d1d9; }
+
+/* ── Recommendation card ─────────────────────────────────── */
+.rec-card {
+    background: linear-gradient(160deg, #161b22 0%, #0d1117 100%);
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    padding: 20px;
+}
+.rec-label-BUY        { color: #00ff88 !important; }
+.rec-label-SELL       { color: #ff4444 !important; }
+.rec-label-HOLD       { color: #ffcc00 !important; }
+.rec-label-STRONG\ BUY  { color: #00e676 !important; }
+.rec-label-STRONG\ SELL { color: #ff1744 !important; }
+
+/* Strength progress bar */
+.strength-bar-container {
+    height: 8px;
+    background-color: #21262d;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 6px 0;
+}
+.strength-bar {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* ── Movers table ─────────────────────────────────────────── */
+.movers-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+.movers-table thead tr th {
+    color: #8b949e;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-bottom: 1px solid #21262d;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.movers-table tbody tr td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #161b22;
+    color: #c9d1d9;
+}
+.movers-table tbody tr:hover { background-color: #1c2128; }
+.movers-table a { color: #4fc3f7; text-decoration: none; }
+.movers-table a:hover { text-decoration: underline; }
+
+/* ── Screener DataTable overrides ─────────────────────────── */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner td,
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner th {
+    background-color: #0d1117 !important;
+    color: #c9d1d9 !important;
+    border: 1px solid #21262d !important;
+}
+
+/* Filter row */
+.dash-filter input {
+    background-color: #161b22 !important;
+    color: #c9d1d9 !important;
+    border: 1px solid #30363d !important;
+}
+
+/* ── Dropdown (Dash) ─────────────────────────────────────── */
+.Select-control,
+.Select-menu-outer,
+.VirtualizedSelectOption {
+    background-color: #161b22 !important;
+    border-color: #30363d !important;
+    color: #c9d1d9 !important;
+}
+.Select-value-label { color: #c9d1d9 !important; }
+.Select-placeholder { color: #8b949e !important; }
+.is-focused .Select-control { border-color: #4fc3f7 !important; }
+
+/* ── Charts loading spinner ─────────────────────────────── */
+._dash-loading { background-color: rgba(13, 17, 23, 0.8) !important; }
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-outline-info {
+    color: #4fc3f7 !important;
+    border-color: #30363d !important;
+}
+.btn-outline-info:hover,
+.btn-outline-info.active {
+    background-color: #4fc3f7 !important;
+    color: #0d1117 !important;
+}
+.btn-outline-primary { border-color: #30363d !important; }
+
+/* ── Badge ───────────────────────────────────────────────── */
+.badge { font-size: 11px; letter-spacing: 0.04em; }
+
+/* ── Radio items (dark style) ────────────────────────────── */
+.form-check-input:checked {
+    background-color: #4fc3f7 !important;
+    border-color: #4fc3f7 !important;
+}
+.form-check-label { color: #c9d1d9 !important; font-size: 13px; }
+
+/* ── Responsive chart container ─────────────────────────── */
+.js-plotly-plot .plotly { border-radius: 8px; }
+.modebar { background-color: #161b22 !important; }
+.modebar-btn path { fill: #8b949e !important; }
+.modebar-btn:hover path { fill: #c9d1d9 !important; }
+
+/* ── Tooltip ─────────────────────────────────────────────── */
+.hoverlayer .hovertext { font-family: monospace !important; }
+
+/* ── Footer ──────────────────────────────────────────────── */
+hr { border-color: #21262d !important; }
+
+/* ── Page container spacing ───────────────────────────────  */
+.page-content { padding: 0 8px; }
+
+/* ── Custom collapse ─────────────────────────────────────── */
+.navbar-toggler { border-color: #30363d !important; }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(201, 209, 217, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ── Animated badge pulse for market open ────────────────── */
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+.badge.bg-success { animation: pulse 2s infinite; }
